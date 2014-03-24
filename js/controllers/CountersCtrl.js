@@ -3,8 +3,8 @@
 
 "use strict";
 
-angular.module("counterApp").controller("CountersCtrl", ["$scope",
-    function($scope) {
+angular.module("counterApp").controller("CountersCtrl", ["$scope", "Counter",
+    function($scope, Counter) {
         $scope.counters = [];
 
         $scope.numCounters = function() {
@@ -12,9 +12,12 @@ angular.module("counterApp").controller("CountersCtrl", ["$scope",
         };
 
         $scope.addCounter = function() {
-            $scope.counters.push({
-                count: 0
-            });
+            var counter = new Counter();
+            $scope.counters.push(counter);
+        };
+
+        $scope.removeCounter = function(index) {
+            $scope.counters.splice(index, 1);
         };
     }
 ]);

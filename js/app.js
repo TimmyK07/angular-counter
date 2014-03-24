@@ -3,4 +3,5 @@
 
 "use strict";
 
-angular.module("counterApp", []);
+angular.module("counterApp", ["counterApp.services"]);
+angular.module("counterApp.services", []);

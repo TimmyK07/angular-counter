@@ -5,12 +5,12 @@
 
 angular.module("counterApp").controller("CounterCtrl", ["$scope",
     function($scope) {
-        $scope.increment = function() {
-            $scope.counter.count++;
+        $scope.incrementCounter = function() {
+            $scope.counter.increment();
         };
 
-        $scope.decrement = function() {
-            $scope.counter.count--;
+        $scope.decrementCounter = function() {
+            $scope.counter.decrement();
         };
     }
 ]);
