@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Angular Counter</title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.2/angular.js"></script>
@@ -23,7 +23,7 @@
         </p>
 
         <div ng-repeat="counter in counters" ng-controller="CounterCtrl">
-            <div class="counter">
+            <div>
                 <div>counter value: {{counter.getCount()}}</div>
                 <button ng-click="incrementCounter()">+</button>
                 <button ng-click="decrementCounter()">-</button>
