@@ -1,4 +1,4 @@
-# angular-counter #
+# angular-counter [![Build Status](https://travis-ci.org/dylants/angular-counter.svg?branch=master)](https://travis-ci.org/dylants/angular-counter) #
 
 A very (very) simple counter app using Angular.js
 
