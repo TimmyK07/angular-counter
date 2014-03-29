@@ -11,7 +11,6 @@ module.exports = function(config) {
 
             // test code
             "bower_components/angular-mocks/angular-mocks.js",
-            "node_modules/chai/chai.js",
 
             // source code
             "app/js/**/*.js",
@@ -22,14 +21,14 @@ module.exports = function(config) {
 
         autoWatch: true,
 
-        frameworks: ["mocha"],
+        frameworks: ["jasmine"],
 
         browsers: ["Chrome", "Firefox"],
 
         plugins: [
             "karma-chrome-launcher",
             "karma-firefox-launcher",
-            "karma-mocha"
+            "karma-jasmine"
         ]
     });
 };

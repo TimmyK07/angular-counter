@@ -2,10 +2,10 @@
     "globalstrict": true,
     "globals": {
         "angular": false,
-        "chai": false,
         "describe": false,
         "beforeEach": false,
         "it": false,
+        "expect": false,
         "module": false,
         "inject": false
     }

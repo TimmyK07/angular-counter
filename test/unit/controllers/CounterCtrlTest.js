@@ -1,7 +1,5 @@
 "use strict";
 
-var assert = chai.assert;
-
 describe("CounterCtrl", function() {
     var scope, controller;
 
@@ -21,6 +19,6 @@ describe("CounterCtrl", function() {
     }));
 
     it("should exist", function() {
-        assert.ok(controller);
+        expect(controller).toBeDefined();
     });
 });
