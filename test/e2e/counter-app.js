@@ -11,7 +11,21 @@ describe("Counter App", function() {
     });
 
     it("should display the add counter button", function() {
-        expect($("p button").getText()).toEqual("Add Counter");
+        expect($("#add-counter").getText()).toEqual("Add Counter");
+    });
+
+    it("should NOT display any counters", function() {
+        expect($(".counter").isPresent()).toBeFalsy();
+    });
+
+    describe("clicking Add Counter", function() {
+        beforeEach(function() {
+            $("#add-counter").click();
+        });
+
+        it("should display a counter", function() {
+            expect($(".counter").isPresent()).toBeTruthy();
+        });
     });
 
 });

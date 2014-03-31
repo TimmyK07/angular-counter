@@ -19,12 +19,12 @@
     <section id="main" class="container" ng-controller="CountersCtrl">
         <p>
             <span class="heading">Angular Counters</span>
-            <button ng-click="addCounter()">Add Counter</button>
+            <button id="add-counter" ng-click="addCounter()">Add Counter</button>
         </p>
 
-        <div ng-repeat="counter in counters" ng-controller="CounterCtrl">
+        <div ng-repeat="counter in counters" ng-controller="CounterCtrl" ng-cloak class="counter ng-cloak">
             <div>
-                <div>counter value: {{counter.getCount()}}</div>
+                <div ng-bind-template="counter value: {{counter.getCount()}}"></div>
                 <button ng-click="incrementCounter()">+</button>
                 <button ng-click="decrementCounter()">-</button>
                 <button ng-click="removeCounter($index)">Remove Counter</button>
